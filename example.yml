@@ -1,0 +1,225 @@
+openapi: 3.0.3
+
+# ============================================================
+# ArtMap API 명세서 — 01. GET /map/countries
+# ------------------------------------------------------------
+# 용도   : 홈 화면 지도 초기 로딩 시 국가별 버블 마커 렌더링
+# 기능   : PRD F-002 (지도 기반 탐색 — 초기 로딩)
+# 작성일 : 2026-03-21
+# 추후   : 전체 API 명세서(openapi.yaml)에 통합 예정
+# ============================================================
+
+info:
+  title: ArtMap API — 01. GET /map/countries
+  version: 1.0.0
+  description: |
+    홈 화면 지도의 국가 버블 마커를 렌더링하기 위한
+    국가별 작품 수 집계 데이터를 반환하는 엔드포인트입니다.
+
+    [PRD 근거] F-002 지도 기반 탐색
+    "초기 로딩 시 주요 미술관 보유 국가에 버블 마커가 표시됩니다.
+     버블의 크기는 해당 국가의 등록 작품 수에 비례합니다."
+
+    [ERD 데이터 흐름]
+    artwork_locations.place_id
+      → places.country (국가 코드 기준으로 GROUP BY 집계)
+      → places.latitude / places.longitude (국가 대표 좌표)
+
+    [설계 결정 사항]
+    - ERD에 countries 테이블이 별도로 존재하지 않습니다.
+      places 테이블의 country 컬럼을 기준으로 집계한 응답 전용 객체(CountryMapData)를 사용합니다.
+    - 국가명(country_name_ko / country_name_en)은 ERD에 직접 대응하는 컬럼이 없습니다.
+      백엔드에서 ISO 3166-1 alpha-2 코드를 국가명으로 변환해서 내보냅니다.
+    - artwork_count 집계 시 artwork_locations.location_type = 'permanent_exhibition' 조건을 기본으로 합니다.
+      (대여 중 / 보관 중 작품은 버블 크기 산정에서 제외)
+
+servers:
+  - url: http://localhost:8000/api/v1
+    description: 로컬 개발 서버
+  - url: https://api.artmap.com/v1
+    description: 프로덕션 서버 (추후 확정)
+
+paths:
+  /map/countries:
+    get:
+      summary: 국가별 작품 수 집계 데이터 조회
+      operationId: getMapCountries
+      tags:
+        - Map
+
+      description: |
+        국가별 버블 마커 렌더링에 필요한 집계 데이터를 배열로 반환합니다.
+        파라미터가 없는 단순 GET 요청입니다. 인증도 필요하지 않습니다.
+
+        응답 배열의 각 항목(CountryMapData)은 다음을 포함합니다.
+          - 국가 식별 정보 (코드, 한/영 이름)
+          - 해당 국가의 상설 전시 중 작품 수 (버블 크기 결정)
+          - 버블 마커가 표시될 대표 위도/경도
+
+      # 이 API는 파라미터가 없습니다.
+      parameters: []
+
+      responses:
+        "200":
+          description: |
+            성공. 국가별 집계 데이터 배열 반환.
+            작품이 한 점도 없는 국가는 배열에 포함되지 않습니다.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/CountryMapData"
+
+              # 실제 응답 예시 (프론트 개발 시 목업 데이터로 활용 가능)
+              example:
+                - country_code: "FR"
+                  country_name_ko: "프랑스"
+                  country_name_en: "France"
+                  artwork_count: 847
+                  latitude: 46.2276
+                  longitude: 2.2137
+
+                - country_code: "US"
+                  country_name_ko: "미국"
+                  country_name_en: "United States"
+                  artwork_count: 623
+                  latitude: 37.0902
+                  longitude: -95.7129
+
+                - country_code: "NL"
+                  country_name_ko: "네덜란드"
+                  country_name_en: "Netherlands"
+                  artwork_count: 412
+                  latitude: 52.1326
+                  longitude: 5.2913
+
+                - country_code: "IT"
+                  country_name_ko: "이탈리아"
+                  country_name_en: "Italy"
+                  artwork_count: 389
+                  latitude: 41.8719
+                  longitude: 12.5674
+
+                - country_code: "GB"
+                  country_name_ko: "영국"
+                  country_name_en: "United Kingdom"
+                  artwork_count: 301
+                  latitude: 55.3781
+                  longitude: -3.4360
+
+        "500":
+          description: 서버 내부 오류
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              example:
+                code: "INTERNAL_SERVER_ERROR"
+                message: "서버 내부 오류가 발생했습니다."
+
+# ============================================================
+# 공통 스키마 정의
+# 추후 전체 명세서 통합 시 최상위 components/schemas 로 이동
+# ============================================================
+components:
+  schemas:
+    CountryMapData:
+      type: object
+      description: |
+        국가별 작품 수 집계 데이터 객체.
+
+        [ERD 연관관계]
+        이 객체는 DB의 단일 테이블과 1:1로 대응하지 않습니다.
+        아래와 같이 여러 테이블을 집계·조합한 응답 전용 객체입니다.
+
+          country_code
+            → ERD: places.country (ISO 3166-1 alpha-2, GROUP BY 기준 컬럼)
+
+          artwork_count
+            → ERD: artwork_locations JOIN places
+                    WHERE artwork_locations.location_type = 'permanent_exhibition'
+                    GROUP BY places.country
+                    COUNT(DISTINCT artwork_locations.artwork_id)
+
+          latitude / longitude
+            → ERD: places.latitude / places.longitude
+                    해당 국가(country_code) 소속 places 레코드들의 대표 좌표.
+                    구체적 산출 방식은 백엔드 재량 (예: 평균값 또는 수도 좌표 사전 정의).
+
+          country_name_ko / country_name_en
+            → ERD에 직접 대응 컬럼 없음.
+                    백엔드에서 country_code 기반으로 국가명 변환 처리.
+
+      required:
+        - country_code
+        - artwork_count
+        - latitude
+        - longitude
+
+      properties:
+        country_code:
+          type: string
+          description: |
+            ISO 3166-1 alpha-2 국가 코드.
+            ERD: places.country
+          minLength: 2
+          maxLength: 2
+          example: "FR"
+
+        country_name_ko:
+          type: string
+          description: |
+            국가명 (한국어).
+            ERD에 직접 대응 컬럼 없음. 백엔드에서 country_code 기반 변환.
+          example: "프랑스"
+
+        country_name_en:
+          type: string
+          description: |
+            국가명 (영어).
+            ERD에 직접 대응 컬럼 없음. 백엔드에서 country_code 기반 변환.
+          example: "France"
+
+        artwork_count:
+          type: integer
+          description: |
+            해당 국가에 상설 전시(permanent_exhibition) 중인 작품 수.
+            지도 버블의 크기 결정에 사용됩니다.
+            ERD: artwork_locations → places.country 집계값.
+            집계 조건: artwork_locations.location_type = 'permanent_exhibition'
+          minimum: 1
+          example: 847
+
+        latitude:
+          type: number
+          format: float
+          description: |
+            국가 버블 마커의 위도.
+            ERD: places.latitude 에서 해당 국가 대표값 사용.
+          example: 46.2276
+
+        longitude:
+          type: number
+          format: float
+          description: |
+            국가 버블 마커의 경도.
+            ERD: places.longitude 에서 해당 국가 대표값 사용.
+          example: 2.2137
+
+    # ----------------------------------------------------------
+    # ErrorResponse: 오류 응답 공통 구조
+    # 전체 API 명세 통합 시 모든 API에서 재사용됩니다.
+    # ----------------------------------------------------------
+    ErrorResponse:
+      type: object
+      description: 오류 응답 공통 구조
+      properties:
+        code:
+          type: string
+          description: 오류 코드
+          example: "INTERNAL_SERVER_ERROR"
+        message:
+          type: string
+          description: 오류 메시지
+          example: "서버 내부 오류가 발생했습니다."
