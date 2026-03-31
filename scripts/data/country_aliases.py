@@ -1,0 +1,17 @@
+COUNTRY_ALIASES = {
+    "US": ["united states", "usa", "us"],
+    "GB": ["united kingdom", "uk", "england", "great britain"],
+    "FR": ["france"],
+    "DE": ["germany", "deutschland"],
+    "NL": ["netherlands", "nederland", "the netherlands"],
+    "IT": ["italy", "italia"],
+    "ES": ["spain", "españa"],
+    "AT": ["austria", "österreich"],
+    "RU": ["russia", "russian federation"],
+    "JP": ["japan", "日本"],
+    "NO": ["norway", "norge"],
+    "AU": ["australia"],
+    "CA": ["canada"],
+    "MX": ["mexico", "méxico"],
+    "KR": ["south korea", "korea", "republic of korea", "대한민국"],
+}
