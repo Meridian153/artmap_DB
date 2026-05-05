@@ -1,5 +1,6 @@
 import uuid
 from datetime import datetime
+from typing import Optional
 
 from sqlalchemy import Integer, String, Text
 from sqlalchemy.dialects.postgresql import UUID as PG_UUID
@@ -22,12 +23,12 @@ class Artist(BaseEntity):
     name_en: Mapped[str] = mapped_column(String)
     name_ko: Mapped[str] = mapped_column(String)
     birth_year: Mapped[int] = mapped_column(Integer)
-    death_year: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    death_year: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
     nationality: Mapped[str] = mapped_column(String)
     bio_en: Mapped[str] = mapped_column(Text, default="")
     bio_ko: Mapped[str] = mapped_column(Text, default="")
     thumbnail_url: Mapped[str] = mapped_column(String, default="")
-    wikidata_id: Mapped[str | None] = mapped_column(String, nullable=True)
+    wikidata_id: Mapped[Optional[str]] = mapped_column(String, nullable=True)
 
     @classmethod
     def create(
@@ -38,9 +39,9 @@ class Artist(BaseEntity):
         nationality: str,
         bio_en: str = "",
         bio_ko: str = "",
-        death_year: int | None = None,
+        death_year: Optional[int] = None,
         thumbnail_url: str = "",
-        wikidata_id: str | None = None,
+        wikidata_id: Optional[str] = None,
     ) -> "Artist":
         """작가 생성 (Factory Method)"""
         return cls(
@@ -56,7 +57,7 @@ class Artist(BaseEntity):
             wikidata_id=wikidata_id,
         )
 
-    def update_biography(self, bio_en: str | None, bio_ko: str | None) -> None:
+    def update_biography(self, bio_en: Optional[str], bio_ko: Optional[str]) -> None:
         """작가 약력 업데이트"""
         if bio_en:
             self.bio_en = bio_en
@@ -78,7 +79,7 @@ class Artist(BaseEntity):
         """생존 여부"""
         return self.death_year is None
 
-    def get_age(self, current_year: int | None = None) -> int:
+    def get_age(self, current_year: Optional[int] = None) -> int:
         """나이 계산"""
         if current_year is None:
             current_year = datetime.now().year

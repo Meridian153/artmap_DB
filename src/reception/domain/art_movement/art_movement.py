@@ -1,4 +1,5 @@
 import uuid
+from typing import Optional
 
 from sqlalchemy import Integer, String, Text
 from sqlalchemy.dialects.postgresql import UUID as PG_UUID
@@ -17,18 +18,18 @@ class ArtMovement(Base):
     )
     name_en: Mapped[str] = mapped_column(String)
     name_ko: Mapped[str] = mapped_column(String)
-    period_start: Mapped[int | None] = mapped_column(Integer, nullable=True)
-    period_end: Mapped[int | None] = mapped_column(Integer, nullable=True)
-    description: Mapped[str | None] = mapped_column(Text, nullable=True)
+    period_start: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
+    period_end: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
+    description: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
 
     @classmethod
     def create(
         cls,
         name_en: str,
         name_ko: str,
-        period_start: int | None = None,
-        period_end: int | None = None,
-        description: str | None = None,
+        period_start: Optional[int] = None,
+        period_end: Optional[int] = None,
+        description: Optional[str] = None,
     ) -> "ArtMovement":
         return cls(
             id=uuid.uuid4(),

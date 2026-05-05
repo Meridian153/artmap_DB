@@ -1,5 +1,6 @@
 import uuid
 from datetime import datetime
+from typing import Optional
 
 from sqlalchemy import Boolean, Integer, String, Text, UniqueConstraint
 from sqlalchemy.dialects.postgresql import UUID as PG_UUID
@@ -28,15 +29,15 @@ class Artwork(BaseEntity):
     title_en: Mapped[str] = mapped_column(String)
     title_ko: Mapped[str] = mapped_column(String)
     year_created: Mapped[int] = mapped_column(Integer)
-    year_end: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    year_end: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
     medium_en: Mapped[str] = mapped_column(String)
     medium_ko: Mapped[str] = mapped_column(String)
-    dimensions: Mapped[str | None] = mapped_column(String, nullable=True)
-    image_url: Mapped[str | None] = mapped_column(String, nullable=True)
-    image_source: Mapped[str | None] = mapped_column(String, nullable=True)
+    dimensions: Mapped[Optional[str]] = mapped_column(String, nullable=True)
+    image_url: Mapped[Optional[str]] = mapped_column(String, nullable=True)
+    image_source: Mapped[Optional[str]] = mapped_column(String, nullable=True)
     status: Mapped[str] = mapped_column(String, default=ArtworkStatus.IN_STORAGE.value)
-    curation_en: Mapped[str | None] = mapped_column(Text, nullable=True)
-    curation_ko: Mapped[str | None] = mapped_column(Text, nullable=True)
+    curation_en: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    curation_ko: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     source_api: Mapped[str] = mapped_column(String)
     source_id: Mapped[str] = mapped_column(String)
     is_public_domain: Mapped[bool] = mapped_column(Boolean, default=False)
@@ -122,7 +123,7 @@ class Artwork(BaseEntity):
         """전시 가능 여부 확인"""
         return self.status in [ArtworkStatus.IN_STORAGE, ArtworkStatus.ON_DISPLAY]
 
-    def update_curation(self, curation_en: str | None, curation_ko: str | None) -> None:
+    def update_curation(self, curation_en: Optional[str], curation_ko: Optional[str]) -> None:
         """큐레이션 정보 업데이트"""
         if curation_en:
             self.curation_en = curation_en
