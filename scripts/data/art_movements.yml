@@ -1,0 +1,682 @@
+art_movements:
+  - name_en: Analytical Cubism
+    name_ko: "분석적 입체파"
+    period_start: 1908
+    period_end: 1912
+    description:
+      Cubism is an early-20th-century avant-garde art movement which began
+      in Paris. It revolutionized painting and the visual arts, and sparked artistic
+      innovations in music, ballet, literature, and architecture.
+
+  - name_en: Art Nouveau
+    name_ko: 아르누보
+    period_start: 1890
+    period_end: 1910
+    description:
+      Art Nouveau, Jugendstil in German, is an international style of art,
+      architecture, and applied art, especially the decorative arts. It was often inspired
+      by natural forms such as the sinuous curves of plants and flowers. Other characteristics
+      of Art Nouveau were a sense of dynamism and movement, often given by asymmetry
+      or whiplash lines, and the use of modern materials, particularly iron, glass,
+      ceramics, and later concrete, to create total works of art in which all components
+      formed a cohesive aesthetic whole.
+
+  - name_en: asian
+    name_ko: 아시아
+    period_start: null
+    period_end: null
+    description:
+      A broad stylistic designation used to categorize artworks originating from
+      or inspired by Asian cultures, encompassing diverse traditions from East Asia,
+      South Asia, and Southeast Asia. The term is used as an umbrella category in
+      Western museum collections to denote works reflecting Asian aesthetics,
+      techniques, and subjects, including ink painting, decorative arts, ceramics,
+      and textile traditions.
+
+  - name_en: Baroque
+    name_ko: 바로크
+    period_start: null
+    period_end: 1750
+    description:
+      The Baroque is a Western style of architecture, music, dance, painting,
+      sculpture, poetry, and other arts that flourished from the early 17th century
+      until the 1750s. It followed Renaissance art and Mannerism and preceded the Rococo
+      and Neoclassical styles. It was encouraged by the Catholic Church as a means to
+      counter the simplicity and austerity of Protestant architecture, art, and music,
+      though it also flourished widely in Protestant Northern Europe, particularly
+      in the Dutch Republic.
+
+  - name_en: Baroque painting
+    name_ko: 바로크 회화
+    period_start: 1600
+    period_end: 1800
+    description:
+      Baroque painting is the painting associated with the Baroque cultural
+      movement. The movement is often identified with Absolutism, the Counter Reformation
+      and Catholic Revival, but the existence of important Baroque art and architecture
+      in non-absolutist and Protestant states throughout Western Europe underscores
+      its widespread popularity.
+
+  - name_en: Bauhaus
+    name_ko: 바우하우스
+    period_start: 1919
+    period_end: null
+    description:
+      The Staatliches Bauhaus, commonly known as the Bauhaus, was a German
+      art school operational from 1919 to 1933 that combined crafts and the fine arts.
+      The school became famous for its approach to design, which attempted to unify
+      individual artistic vision with the principles of mass production and emphasis
+      on function.
+
+  - name_en: Blue period
+    name_ko: 청색 시대
+    period_start: 1901
+    period_end: 1903
+    description:
+      The Blue Period comprises the works produced by Spanish painter Pablo
+      Picasso between 1901 and 1904. During this time, Picasso painted essentially monochromatic
+      paintings in shades of blue and blue-green, only occasionally warmed by other
+      colors. These sombre works, inspired by Spain and painted in Barcelona and Paris,
+      are now some of his most popular works, although he had difficulty selling them
+      at the time due to their somber themes depicting poverty, isolation, and despair.
+
+  - name_en: classicism
+    name_ko: 고전주의
+    period_start: 1750
+    period_end: 1830
+    description:
+      Classicism, in the arts, refers generally to a high regard for a classical
+      period, classical antiquity in the Western tradition, as setting standards for
+      taste which the classicists seek to emulate. In its purest form, classicism is
+      an aesthetic attitude dependent on principles based in the culture, art and literature
+      of ancient Greece and Rome, with the emphasis on form, simplicity, proportion,
+      clarity of structure, and emotional restraint.
+
+  - name_en: cloisonnism
+    name_ko: 구획주의
+    period_start: 1887
+    period_end: 1890
+    description:
+      Cloisonnism is a style of post-Impressionist painting with bold and
+      flat forms separated by dark contours. The term was coined by critic Édouard Dujardin
+      on the occasion of the Salon des Indépendants, in March 1888. Artists Émile Bernard,
+      Louis Anquetin, Paul Gauguin, Paul Sérusier, and others started painting in this
+      style in the late 19th century. The name evokes the technique of cloisonné,
+      where wires are soldered to the body of the piece, filled with powdered glass, and then fired
+
+  - name_en: Color Field
+    name_ko: 색면 회화
+    period_start: 1947
+    period_end: 1965
+    description:
+      Color field painting is a style of abstract painting that emerged in
+      New York City during the 1940s and 1950s. It was inspired by European modernism
+      and closely related to abstract expressionism, while many of its notable early
+      proponents were among the pioneering abstract expressionists. Color field is characterized
+      primarily by large fields of flat, solid color spread across or stained into the
+      canvas, prioritizing color and surface over gestural brushwork.
+
+  - name_en: Confetti Cubism
+    name_ko: 콘페티 큐비즘
+    period_start: 1911
+    period_end: 1914
+    description:
+      A vibrant and dynamic offshoot of Cubism, heavily influenced by Pointillism
+      and Orphism. It is characterized by the use of bright, contrasting colors applied
+      in small, overlapping geometric patches or dots that resemble scattered confetti.
+      This style departed from the monochromatic palette of early Analytical Cubism,
+      infusing the fragmented forms with kinetic energy and optical color mixing.
+
+  - name_en: Counter-Reformation
+    name_ko: 반종교개혁
+    period_start: 1545
+    period_end: 1648
+    description:
+      The Catholic Church's robust response to the Protestant Reformation, initiated
+      by the Council of Trent. In art, it strictly mandated that visual imagery should
+      be clear, direct, and emotionally compelling to inspire piety and awe in the
+      faithful. This ideological shift became the driving force behind the development
+      of the Baroque style, characterized by intense chiaroscuro, dramatic realism,
+      and theatrical compositions.
+
+  - name_en: cubism
+    name_ko: 입체파
+    period_start: 1907
+    period_end: 1914
+    description:
+      A revolutionary avant-garde movement pioneered by Pablo Picasso and Georges
+      Braque that fundamentally changed European painting and sculpture. It rejected
+      traditional linear perspective, foreshortening, and modeling. Instead, subjects
+      were analyzed, broken down into geometric facets, and reassembled to depict multiple
+      viewpoints simultaneously on a single two-dimensional plane, conceptualizing
+      reality rather than merely copying it.
+
+  - name_en: De Stijl
+    name_ko: 더 스테일
+    period_start: 1917
+    period_end: 1931
+    description:
+      A Dutch artistic movement founded by Piet Mondrian and Theo van Doesburg,
+      also known as Neoplasticism. It advocated for pure abstraction and universality
+      by reducing visual compositions to their most essential elements. Artists strictly
+      limited their visual vocabulary to straight horizontal and vertical lines, rectangular
+      forms, and a palette confined to primary colors (red, blue, yellow) alongside
+      non-colors (white, black, gray).
+
+  - name_en: divisionism
+    name_ko: 분할주의
+    period_start: 1884
+    period_end: 1910
+    description:
+      A characteristic style in Neo-Impressionist painting defined by the separation
+      of colors into individual dots or strokes of pigment. Grounded in the scientific
+      color theories of the late 19th century, it relies on the viewer's eye to optically
+      blend the separate colors together (optical mixture) rather than physically mixing
+      them on a palette, theoretically achieving greater maximum luminosity and color
+      harmony.
+
+  - name_en: Dutch Golden Age painting
+    name_ko: 네덜란드 황금기 회화
+    period_start: 1588
+    period_end: 1672
+    description:
+      A period of immense artistic output during the 17th-century Dutch Republic's
+      economic and cultural zenith. Lacking significant church patronage, artists catered
+      to a wealthy merchant middle class. This era is celebrated for its highly detailed
+      realism and mastery of light in secular genres, including everyday genre scenes,
+      meticulously observed still lifes, expansive landscapes, and profound portraiture
+      (exemplified by Rembrandt and Vermeer).
+
+  - name_en: Early Netherlandish painting
+    name_ko: 플랑드르파
+    period_start: 1420
+    period_end: 1520
+    description:
+      The work of artists, often known as the Flemish Primitives, active in
+      the Burgundian and Habsburg Netherlands during the 15th and 16th centuries. It
+      is profoundly significant for the pioneering perfection of oil painting techniques.
+      This medium allowed for unprecedented luminous, enamel-like surfaces, excruciatingly
+      precise naturalistic details, rich textures, and complex religious symbolism,
+      as pioneered by Jan van Eyck.
+
+  - name_en: Early Renaissance
+    name_ko: 초기 르네상스
+    period_start: 1400
+    period_end: 1490
+    description:
+      Emerging primarily in Florence, Italy, this period marks a definitive
+      break from medieval artistic conventions, fueled by a revival of classical antiquity's
+      humanist ideals. It is defined by revolutionary innovations such as the invention
+      of mathematical linear perspective by Brunelleschi, the naturalistic observation
+      of human anatomy, and the use of chiaroscuro to create convincing three-dimensional
+      volume within rational, measured spatial settings.
+
+  - name_en: East Asian
+    name_ko: 동아시아 미술
+    period_start: null
+    period_end: null
+    description:
+      A broad categorization encompassing the historically interwoven yet distinct
+      visual arts traditions of China, Japan, Korea, and surrounding regions. While
+      incredibly diverse, recurring philosophical and aesthetic through-lines include
+      an emphasis on the profound connection between humanity and nature, the supreme
+      elevation of calligraphy and ink wash painting (literati traditions), a masterful
+      utilization of negative space (ma/yebaek), and highly refined ceramic arts.
+
+  - name_en: edo (japanese period)
+    name_ko: 에도 시대
+    period_start: 1603
+    period_end: 1868
+    description:
+      A prolonged period of peace, economic growth, and strict isolationism
+      under the Tokugawa shogunate. It witnessed the explosive rise of a vibrant urban
+      merchant-class culture. The most globally influential artistic output of this
+      era was 'Ukiyo-e' (pictures of the floating world)—mass-produced, vividly colored
+      woodblock prints depicting popular subjects like kabuki actors, beautiful courtesans,
+      and dramatic landscapes, which later deeply inspired Western modernism.
+
+  - name_en: English painting
+    name_ko: 잉글랜드 회화
+    period_start: null
+    period_end: null
+    description:
+      English art is the body of visual arts made in England. England has
+      Europe's earliest and northernmost ice-age cave art. Prehistoric art in England
+      largely corresponds with art made elsewhere in contemporary Britain, but early
+      medieval Anglo-Saxon art saw the development of a distinctly English style, and
+      English art continued thereafter to have a distinct character. English art made
+      after the formation of the Kingdom of Great Britain in 1707 is usually described
+      as British art.
+
+  - name_en: Expressionism
+    name_ko: 표현주의
+    period_start: 1905
+    period_end: 1933
+    description:
+      Expressionism is a modernist movement, initially in poetry and painting,
+      originating in Northern Europe around the beginning of the 20th century. Its typical
+      trait is to present the world solely from a subjective perspective, distorting
+      it radically for emotional effect in order to evoke moods or ideas. Expressionist
+      artists have sought to express the meaning of emotional experience rather than
+      physical reality, with key figures including Ernst Ludwig Kirchner, Egon Schiele,
+      and Ernst Barlach.
+
+  - name_en: Fauvism
+    name_ko: 야수파
+    period_start: 1904
+    period_end: 1908
+    description:
+      Fauvism is a style of painting and an art movement that emerged in
+      France at the beginning of the 20th century. It was the style of les Fauves, a
+      group of modern artists whose works emphasized painterly qualities and strong
+      color over the representational or realistic values retained by Impressionism.
+      While Fauvism as a style began around 1904 and continued beyond 1910, the movement
+      as such lasted only a few years, from 1904 to 1908, before its leading artists
+      moved on to other individual styles.
+
+  - name_en: Flemish Baroque painting
+    name_ko: 플랑드르 바로크 회화
+    period_start: 1585
+    period_end: 1700
+    description:
+      Flemish Baroque painting was a style of painting in the Southern Netherlands
+      during Spanish control in the 16th and 17th centuries. The period roughly begins
+      when the Dutch Republic was split from the Habsburg Spain regions to the south
+      with the Spanish recapturing of Antwerp in 1585 and goes until about 1700, when
+      Spanish Habsburg authority ended with the death of King Charles II. Antwerp, home
+      to Peter Paul Rubens, was the artistic center of the region and produced some
+      of the most celebrated Baroque paintings of the era.
+
+  - name_en: Florentine School
+    name_ko: 피렌체 화파
+    period_start: 1300
+    period_end: 1500
+    description:
+      Florentine painting or the Florentine school refers to artists in,
+      from, or influenced by the naturalistic style developed in Florence in the 14th
+      century, largely through the efforts of Giotto di Bondone, and in the 15th century
+      the leading school of Western painting. Some of the best known painters of the
+      earlier Florentine School are Fra Angelico, Botticelli, Filippo Lippi, the Ghirlandaio
+      family, Paolo Uccello, and later Leonardo da Vinci and Michelangelo.
+
+  - name_en: French Realism
+    name_ko: 프랑스 사실주의
+    period_start: 1840
+    period_end: 1880
+    description:
+      French Realism was a mid-19th-century art movement centered in France that rejected
+      Romantic idealization in favor of honest, unembellished depictions of everyday
+      life and contemporary society. Led by Gustave Courbet, Jean-François Millet,
+      and Honoré Daumier, it portrayed peasants, laborers, and ordinary people with
+      dignity and truth, challenging the dominance of historical and mythological
+      subjects in French academic painting.
+
+  - name_en: German Renaissance
+    name_ko: 독일 르네상스
+    period_start: 1430
+    period_end: 1580
+    description:
+      The German Renaissance, part of the Northern Renaissance, was a cultural
+      and artistic movement that spread among German thinkers in the 15th and 16th centuries,
+      which developed from the Italian Renaissance. Many areas of the arts and sciences
+      were influenced, notably by the spread of Renaissance humanism to the various
+      German states and principalities. There were many advances made in the fields
+      of architecture, painting, and printmaking, with Albrecht Dürer and Hans
+      Holbein the Younger among its most prominent figures.
+
+  - name_en: High Renaissance
+    name_ko: 전성기 르네상스
+    period_start: 1490
+    period_end: 1520
+    description:
+      In art history, the High Renaissance was a short period of the most
+      exceptional artistic production in the Italian states, particularly Rome, capital
+      of the Papal States, and in Florence, during the Italian Renaissance. Most art
+      historians state that the High Renaissance started between 1490 and 1500, and
+      ended in 1520 with the death of Raphael, although some say the High Renaissance
+      ended about 1527 with the Sack of Rome. Its chief masters were Leonardo da Vinci,
+      Michelangelo, and Raphael.
+
+  - name_en: Impressionism
+    name_ko: 인상주의
+    period_start: 1860
+    period_end: 1880
+    description:
+      Impressionism was a 19th-century art movement characterized by visible
+      brush strokes, open composition, emphasis on accurate depiction of light in its
+      changing qualities, ordinary subject matter, unusual visual angles, and inclusion
+      of movement as a crucial element of human perception and experience. Impressionism
+      originated with a group of Paris-based artists whose independent exhibitions brought
+      them to prominence during the 1870s and 1880s, challenging the dominance of
+      the French Academy.
+
+  - name_en: Italian Renaissance
+    name_ko: 이탈리아 르네상스
+    period_start: 1300
+    period_end: 1600
+    description:
+      The Italian Renaissance is a period in Italian history covering the
+      15th and 16th centuries. It is the initial development of the broader Renaissance
+      culture that spread from Italy to the rest of Europe. The period marked the transition
+      from the Middle Ages to the modern era. Proponents of a "long Renaissance" argue
+      that it started around the year 1300 and lasted until about 1600. In some fields,
+      the end of the Italian Renaissance is linked to the close of the Italian Wars
+      in 1559.
+
+  - name_en: Japanese (culture or style)
+    name_ko: ""
+    period_start: null
+    period_end: null
+    description:
+      A broad descriptive category used by Western museums to identify artworks created
+      in Japan or in a distinctly Japanese aesthetic tradition. It encompasses a wide
+      range of media and periods, from ancient ceramics and Buddhist sculpture to ink
+      painting, lacquerwork, textiles, and woodblock prints, reflecting the long and
+      diverse history of Japanese artistic production.
+
+  - name_en: Japanism
+    name_ko: 재패니즘
+    period_start: 1900
+    period_end: 2000
+    description:
+      A general term referring to the broad cultural influence of Japanese art, design,
+      and philosophy on Western art and culture during the 19th and early 20th centuries.
+      Distinct from the specifically French Japonisme, Japanism encompasses the wider
+      adoption of Japanese aesthetic principles—including minimalism, asymmetry, and
+      the harmony of craftsmanship—across European and American art and design movements.
+
+  - name_en: Japonisme
+    name_ko: 재패니즘
+    period_start: null
+    period_end: null
+    description:
+      A term coined by French critic Philippe Burty in 1872 to describe the French
+      craze for Japanese art following Japan's opening to trade in the 1850s. European
+      artists such as Monet, Degas, Van Gogh, and Whistler collected Japanese woodblock
+      prints (ukiyo-e) and incorporated their visual principles—flat color planes,
+      asymmetrical compositions, bold outlines, and unconventional cropping—into
+      their own work.
+
+  - name_en: Kasei culture
+    name_ko: 카세이 문화
+    period_start: 1804
+    period_end: 1830
+    description:
+      The Kasei era (1804–1830) was a period of flourishing popular urban culture
+      during the late Edo period in Japan. It witnessed a golden age of artistic
+      production, particularly in ukiyo-e woodblock printing with artists such as
+      Katsushika Hokusai and Utagawa Hiroshige, as well as in literature and kabuki
+      theater, reflecting the prosperity and tastes of the urban merchant class (chōnin).
+
+  - name_en: Mannerism
+    name_ko: 매너리즘
+    period_start: 1520
+    period_end: 1600
+    description:
+      Mannerism was a European style that emerged in Italy around 1520 following the
+      High Renaissance and lasted until approximately 1600. It is characterized by
+      artificial elegance, elongated figures, complex spatial arrangements, and a
+      sophisticated use of color. Rather than the harmonious idealism of the High
+      Renaissance, Mannerist artists such as Pontormo, Bronzino, and El Greco
+      deliberately created tension and ambiguity.
+
+  - name_en: modern art
+    name_ko: 근대 미술
+    period_start: null
+    period_end: null
+    description:
+      Modern art refers to artistic works produced from approximately the 1860s to
+      the 1970s that broke with the conventions of academic and representational art.
+      Characterized by experimentation and a desire to challenge established norms,
+      it encompasses movements from Impressionism and Post-Impressionism through Cubism,
+      Expressionism, Surrealism, and Abstract Expressionism, reflecting the rapid social
+      and technological changes of the era.
+
+  - name_en: Modernism
+    name_ko: 모더니즘
+    period_start: 2000
+    period_end: 2000
+    description:
+      Modernism in the visual arts was a wide-ranging cultural movement that flourished
+      in the late 19th and early 20th centuries, defined by a deliberate break from
+      tradition and a search for new forms of expression. Rejecting academic conventions,
+      Modernist artists embraced abstraction, experimentation, and the exploration of
+      materials and techniques, reflecting the rapid social and technological changes
+      of industrialized society.
+
+  - name_en: Neo-impressionism
+    name_ko: 신인상주의
+    period_start: 1886
+    period_end: 1900
+    description:
+      Neo-Impressionism was an art movement founded in France in 1886 as a reaction
+      against the spontaneity of Impressionism. It applied a more scientific rigor
+      to color theory, using Pointillism (Divisionism) in which pure colors are applied
+      in small, distinct dots that blend optically in the viewer's eye. Georges Seurat
+      and Paul Signac were its primary proponents, seeking greater luminosity and
+      color harmony through systematic technique.
+
+  - name_en: Neoclassicism
+    name_ko: 신고전주의
+    period_start: 1760
+    period_end: 1830
+    description:
+      Neoclassicism was an 18th and early 19th-century movement in the visual arts
+      that drew inspiration from the classical art and culture of ancient Greece and
+      Rome. Emerging as a reaction against the ornate Baroque and Rococo styles, it
+      emphasized order, symmetry, simplicity, and rationalism, reflecting the intellectual
+      ideals of the Enlightenment. Key figures include Jacques-Louis David, Antonio
+      Canova, and Jean-Auguste-Dominique Ingres.
+
+  - name_en: Northern Renaissance
+    name_ko: 북방 르네상스
+    period_start: 1430
+    period_end: 1580
+    description:
+      The Northern Renaissance was the Renaissance that emerged in Northern Europe—
+      including the Low Countries, Germany, France, and England—during the 15th and
+      16th centuries. Developing distinct characteristics from the Italian Renaissance,
+      it placed greater emphasis on detailed realism, religious themes, and the perfection
+      of oil painting techniques, with key figures including Jan van Eyck, Albrecht
+      Dürer, and Hans Holbein the Younger.
+
+  - name_en: pointillism
+    name_ko: 점묘법
+    period_start: 1884
+    period_end: 1900
+    description:
+      Pointillism is a painting technique developed in the mid-1880s by Georges Seurat
+      and Paul Signac in which small, distinct dots of pure color are applied in patterns
+      to form an image. Grounded in scientific color theory, the technique relies on
+      the viewer's eye to blend the colors optically rather than physically mixing them
+      on the palette, theoretically producing more luminous and vibrant results than
+      conventional pigment mixing.
+
+  - name_en: Pont-Aven School
+    name_ko: 퐁타방 화파
+    period_start: 1886
+    period_end: 1890
+    description:
+      The Pont-Aven School was a loose association of artists who gathered in the
+      Breton village of Pont-Aven, France, during the 1880s and 1890s, centering around
+      Paul Gauguin. Rejecting Impressionism, they developed a Post-Impressionist style
+      of bold color, flat forms, and symbolic content that evolved into Synthetism and
+      Cloisonnism, drawing inspiration from the rural life and folk traditions of Brittany.
+
+  - name_en: Post-impressionism
+    name_ko: 후기인상주의
+    period_start: 1880
+    period_end: 1905
+    description:
+      Post-Impressionism is a predominantly French art movement that emerged in the
+      1880s as a reaction against the naturalistic depictions of light and color in
+      Impressionism. While building on Impressionist techniques, artists such as Paul
+      Cézanne, Vincent van Gogh, Paul Gauguin, and Georges Seurat extended it in various
+      directions, emphasizing geometric structure, expressive use of color, and symbolic
+      or emotional content.
+
+  - name_en: primitivism
+    name_ko: 원시주의
+    period_start: 1900
+    period_end: 2000
+    description:
+      Primitivism in modern art refers to a late 19th and early 20th-century Western
+      artistic interest in and appropriation of art forms from non-Western cultures,
+      particularly from Africa, Oceania, and pre-Columbian America. Rejecting the
+      sophistication of European academic art, artists like Paul Gauguin, Pablo Picasso,
+      and the German Expressionists drew on these traditions, seeing them as more
+      authentic, direct, and spiritually expressive.
+
+  - name_en: Realism
+    name_ko: 사실주의
+    period_start: 1840
+    period_end: 1880
+    description:
+      Realism was a mid-19th-century art movement that originated in France and sought
+      to depict ordinary subjects and contemporary life truthfully and without idealization.
+      As a reaction against the heroic themes of Romanticism and the conventions of
+      academic painting, Realist artists like Gustave Courbet, Jean-François Millet,
+      and Honoré Daumier portrayed peasants, workers, and everyday scenes with directness
+      and social awareness.
+
+  - name_en: reclining
+    name_ko: 와상
+    period_start: null
+    period_end: null
+    description:
+      Reclining is not a movement but a recurring figurative subject in Western art,
+      depicting a human figure—typically a nude—lying in a horizontal position. From
+      ancient sculpture through the Renaissance and into modern painting, the reclining
+      figure has been used to explore beauty, sensuality, and vulnerability, with iconic
+      examples including Titian's Venus of Urbino, Goya's Maja Desnuda, and Manet's
+      Olympia.
+
+  - name_en: Renaissance
+    name_ko: 르네상스
+    period_start: 1400
+    period_end: 1600
+    description:
+      The Renaissance was a European period of history and cultural movement
+      taking place at the end of the Late Middle Ages and the beginning of the early
+      modern era. It is variously defined as lasting from the 14th century to the 17th
+      or, more narrowly, as covering only the 15th and 16th centuries. It was characterized
+      by the European rediscovery and revival of the literary, philosophical, and artistic
+      traditions of classical antiquity, beginning in Italy and gradually spreading
+      throughout Europe.
+
+  - name_en: Renaissance painting
+    name_ko: 르네상스 회화
+    period_start: 1400
+    period_end: 1600
+    description:
+      Renaissance painting refers to the body of painting produced during the Renaissance,
+      roughly from the 14th to the 17th century across Europe. It is characterized
+      by the revival of classical themes, the development of linear perspective,
+      naturalistic representation of the human figure, and mastery of light and shadow
+      (chiaroscuro). It encompasses both the Italian Renaissance (Leonardo, Michelangelo,
+      Raphael) and the Northern Renaissance (van Eyck, Dürer).
+
+  - name_en: Return to Order
+    name_ko: 질서로 회귀
+    period_start: 1918
+    period_end: 1920
+    description:
+      The return to order was a European art movement following the First
+      World War that rejected the extreme avant-garde art of the years up to 1918 and
+      emphasized the classical ideals of order and rationality. The movement is often
+      thought to be a reaction to the war, though strands of the Return to Order began
+      before its outbreak, such as the Noucentisme movement in Spain. Futurism, which
+      had praised war and technology, also underwent a shift toward more classical forms
+      after the devastation of World War I.
+
+  - name_en: Romanticism
+    name_ko: 낭만주의
+    period_start: 1790
+    period_end: 1850
+    description:
+      Romanticism was an artistic and intellectual movement that originated
+      in Europe towards the end of the 18th century. The purpose of the movement was
+      to advocate for the importance of subjectivity, imagination, and appreciation
+      of nature in society and culture in response to the Age of Enlightenment and the
+      Industrial Revolution.
+
+  - name_en: Rose Period
+    name_ko: 장밋빛 시대
+    period_start: 1904
+    period_end: 1906
+    description:
+      The Rose Period comprises the works produced by Spanish painter Pablo
+      Picasso between 1904 and 1906. It began when Picasso settled in Montmartre at
+      the Bateau-Lavoir among Bohemian poets and writers. Following his Blue Period
+      – which depicted themes of poverty, loneliness, and despair in somber, blue tones
+      – Picasso's Rose Period represents more pleasant themes of clowns, harlequins
+      and carnival performers, rendered in warm pinks and beiges, reflecting a more
+      optimistic mood following his relationship with Fernande Olivier.
+
+  - name_en: surrealism
+    name_ko: 초현실주의
+    period_start: 1924
+    period_end: 1966
+    description:
+      Surrealism is an art and cultural movement that developed in Europe
+      in the aftermath of World War I in which artists aimed to allow the unconscious
+      mind to express itself, often resulting in the depiction of illogical or dreamlike
+      scenes and ideas. Its intention was, according to leader André Breton, to "resolve
+      the previously contradictory conditions of dream and reality into an absolute
+      reality, a surreality," using techniques such as automatism and dream imagery.
+
+  - name_en: Surrealism in exile
+    name_ko: 망명 초현실주의
+    period_start: 1940
+    period_end: 1946
+    description:
+      Surrealism in exile refers to the phase of the Surrealist movement during World
+      War II when leading artists—including André Breton, Salvador Dalí, Max Ernst,
+      and Marcel Duchamp—fled Nazi-occupied Europe and relocated primarily to New York
+      and the Americas. This period (roughly 1940–1946) directly exposed American
+      artists to Surrealist ideas and contributed significantly to the emergence of
+      Abstract Expressionism in the United States.
+
+  - name_en: Symbolism
+    name_ko: 상징주의
+    period_start: 1880
+    period_end: 1900
+    description:
+      Symbolism was a late 19th-century art movement of French and Belgian origin
+      that sought to represent absolute truths symbolically through metaphorical images
+      and language. Rejecting Realism, Symbolist painters used mythological imagery,
+      dream-like states, and literary allusion to evoke emotional and spiritual states,
+      with key figures including Gustave Moreau, Odilon Redon, and Fernand Khnopff.
+
+  - name_en: synthetism
+    name_ko: 종합주의
+    period_start: 1888
+    period_end: 1890
+    description:
+      Synthetism is a term used by Post-Impressionist artists like Paul Gauguin,
+      Émile Bernard and Louis Anquetin to distinguish their work stylistically from
+      Impressionism. Earlier, Synthetism has been connected to the term Cloisonnism,
+      and later to Symbolism. The term is derived from the French verb synthétiser.
+
+  - name_en: ukiyo-e
+    name_ko: 우키요에
+    period_start: 1700
+    period_end: 1900
+    description:
+      Ukiyo-e (浮世絵) is a genre of Japanese art that flourished from the 17th
+      through 19th centuries. Its artists produced woodblock prints and paintings of
+      such subjects as female beauties; kabuki actors and sumo wrestlers; scenes from
+      history and folk tales; travel scenes and landscapes; flora and fauna; and erotica.
+      The term ukiyo-e  translates as "picture[s] of the floating world".
+
+  - name_en: Venetian school
+    name_ko: 베네치아 화파
+    period_start: 1400
+    period_end: 1800
+    description:
+      The Venetian school of painting flourished in Venice from the 14th to 18th
+      centuries, distinguished by its emphasis on color, light, and atmospheric effects
+      over the Florentine preference for drawing and line. Major figures include Giovanni
+      Bellini, Giorgione, Titian, Tintoretto, and Paolo Veronese, who developed a rich,
+      sensuous style celebrated for luminous color and pictorial freedom that profoundly
+      influenced the course of Western painting.
