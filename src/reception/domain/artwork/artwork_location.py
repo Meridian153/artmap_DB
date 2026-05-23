@@ -1,5 +1,6 @@
 import uuid
 from datetime import date
+from typing import Optional
 
 from sqlalchemy import Date, ForeignKey, Index, String, Text
 from sqlalchemy.dialects.postgresql import UUID as PG_UUID
@@ -26,9 +27,9 @@ class ArtworkLocation(Base):
     )
     location_type: Mapped[str] = mapped_column(String)
     start_date: Mapped[date] = mapped_column(Date)
-    end_date: Mapped[date | None] = mapped_column(Date, nullable=True)
-    source: Mapped[str | None] = mapped_column(String, nullable=True)
-    notes: Mapped[str | None] = mapped_column(Text, nullable=True)
+    end_date: Mapped[Optional[date]] = mapped_column(Date, nullable=True)
+    source: Mapped[Optional[str]] = mapped_column(String, nullable=True)
+    notes: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
 
     @classmethod
     def create(
@@ -37,9 +38,9 @@ class ArtworkLocation(Base):
         place_id: uuid.UUID,
         location_type: LocationType,
         start_date: date,
-        end_date: date | None = None,
-        source: str | None = None,
-        notes: str | None = None,
+        end_date: Optional[date] = None,
+        source: Optional[str] = None,
+        notes: Optional[str] = None,
     ) -> "ArtworkLocation":
         return cls(
             id=uuid.uuid4(),

@@ -1,5 +1,6 @@
 import uuid
 from decimal import Decimal
+from typing import Optional
 
 from sqlalchemy import ForeignKey, Index, Numeric, String, Text
 from sqlalchemy.dialects.postgresql import JSONB
@@ -18,18 +19,18 @@ class Place(BaseEntity):
     id: Mapped[uuid.UUID] = mapped_column(
         PG_UUID(as_uuid=True), primary_key=True, default=uuid.uuid4
     )
-    institution_id: Mapped[uuid.UUID | None] = mapped_column(
+    institution_id: Mapped[Optional[uuid.UUID]] = mapped_column(
         PG_UUID(as_uuid=True), ForeignKey("institutions.id"), nullable=True
     )
     name_en: Mapped[str] = mapped_column(String)
     name_ko: Mapped[str] = mapped_column(String)
     country: Mapped[str] = mapped_column(String)
     city: Mapped[str] = mapped_column(String)
-    address: Mapped[str | None] = mapped_column(Text, nullable=True)
-    latitude: Mapped[Decimal | None] = mapped_column(Numeric(9, 6), nullable=True)
-    longitude: Mapped[Decimal | None] = mapped_column(Numeric(9, 6), nullable=True)
-    opening_hours: Mapped[dict | None] = mapped_column(JSONB, nullable=True)
-    admission: Mapped[dict | None] = mapped_column(JSONB, nullable=True)
+    address: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    latitude: Mapped[Optional[Decimal]] = mapped_column(Numeric(9, 6), nullable=True)
+    longitude: Mapped[Optional[Decimal]] = mapped_column(Numeric(9, 6), nullable=True)
+    opening_hours: Mapped[Optional[dict]] = mapped_column(JSONB, nullable=True)
+    admission: Mapped[Optional[dict]] = mapped_column(JSONB, nullable=True)
 
     @classmethod
     def create(
@@ -38,12 +39,12 @@ class Place(BaseEntity):
         name_ko: str,
         country: str,
         city: str,
-        institution_id: uuid.UUID | None = None,
-        address: str | None = None,
-        latitude: Decimal | None = None,
-        longitude: Decimal | None = None,
-        opening_hours: dict | None = None,
-        admission: dict | None = None,
+        institution_id: Optional[uuid.UUID] = None,
+        address: Optional[str] = None,
+        latitude: Optional[Decimal] = None,
+        longitude: Optional[Decimal] = None,
+        opening_hours: Optional[dict] = None,
+        admission: Optional[dict] = None,
     ) -> "Place":
         return cls(
             id=uuid.uuid4(),

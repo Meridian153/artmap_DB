@@ -1,0 +1,223 @@
+# ============================================================
+# Wikidata SPARQL 검색 대상 리스트
+# ------------------------------------------------------------
+# 이 파일에 미술관(collection) / 제작자(creator)를 추가하면
+# scripts/ingest_wikidata_by_list.py 가 자동으로 검색 + 저장합니다.
+#
+# 사용법:
+#   python3 scripts/ingest_wikidata_by_list.py
+#   python3 scripts/ingest_wikidata_by_list.py --dry-run   # 미리보기 (DB 저장 안 함)
+#   python3 scripts/ingest_wikidata_by_list.py --output results.csv  # CSV 경로 지정
+#
+# ⚠️ Wikidata ID는 artists_data.py / museums_data.py에서 검증된 값만 사용
+# ⚠️ name은 로그/CSV 식별용이며 SPARQL 검색에는 wikidata_id만 사용됨
+# ============================================================
+
+# 작품 수집 상한 (미술관당 / 제작자당)
+default_limit: 70
+
+# ----------------------------------------------------------
+# 소장처(미술관) 30곳 — 파이프 라인 구축 계획.md 기준
+# Wikidata ID 출처: scripts/data/museums_data.py (검증 완료)
+# ----------------------------------------------------------
+collections:
+  # Tier 1 — 자체 API 보유 (2곳)
+  - wikidata_id: "Q160236"
+    name: "The Metropolitan Museum of Art"
+  - wikidata_id: "Q239303"
+    name: "Art Institute of Chicago"
+
+  # Tier 2 — Europeana/Wikidata 데이터 확보 가능 (13곳)
+  - wikidata_id: "Q19675"
+    name: "Musée du Louvre"
+  - wikidata_id: "Q23402"
+    name: "Musée d'Orsay"
+  - wikidata_id: "Q180788"
+    name: "National Gallery (London)"
+  - wikidata_id: "Q190804"
+    name: "Rijksmuseum"
+  - wikidata_id: "Q224124"
+    name: "Van Gogh Museum"
+  - wikidata_id: "Q160112"
+    name: "Museo del Prado"
+  - wikidata_id: "Q51252"
+    name: "Uffizi Gallery"
+  - wikidata_id: "Q193375"
+    name: "Tate Modern"
+  - wikidata_id: "Q260913"
+    name: "Musée de l'Orangerie"
+  - wikidata_id: "Q214867"
+    name: "National Gallery of Art (DC)"
+  - wikidata_id: "Q188740"
+    name: "Museum of Modern Art (MoMA)"
+  - wikidata_id: "Q132783"
+    name: "Hermitage Museum"
+  - wikidata_id: "Q154568"
+    name: "Alte Pinakothek"
+
+  # Tier 3 — 지리적 다양성 + 화가 커버리지 확장 (10곳)
+  - wikidata_id: "Q95569"
+    name: "Kunsthistorisches Museum"
+  - wikidata_id: "Q303139"
+    name: "Belvedere"
+  - wikidata_id: "Q223139"
+    name: "Galleria dell'Accademia"
+  - wikidata_id: "Q466169"
+    name: "Musée Rodin"
+  - wikidata_id: "Q1069803"
+    name: "Tokyo National Museum"
+  - wikidata_id: "Q1782606"
+    name: "Munch Museum"
+  - wikidata_id: "Q1956534"
+    name: "Pinacoteca di Brera"
+  - wikidata_id: "Q1464509"
+    name: "National Gallery of Victoria"
+  - wikidata_id: "Q510324"
+    name: "Philadelphia Museum of Art"
+  - wikidata_id: "Q431816"
+    name: "Art Gallery of Ontario"
+
+  # Tier 4 — 특수 목적 (5곳)
+  - wikidata_id: "Q1951008"
+    name: "Musée Marmottan Monet"
+  - wikidata_id: "Q1396692"
+    name: "Museo Frida Kahlo"
+  - wikidata_id: "Q1632870"
+    name: "Salvador Dalí Museum"
+  - wikidata_id: "Q460889"
+    name: "Museo Nacional Centro de Arte Reina Sofía"
+  - wikidata_id: "Q170152"
+    name: "Neue Pinakothek"
+
+# ----------------------------------------------------------
+# 제작자(작가) 50명 — 파이프 라인 구축 계획.md 기준
+# Wikidata ID 출처: scripts/data/artists_data.py (검증 완료)
+# ----------------------------------------------------------
+creators:
+  # 르네상스
+  - wikidata_id: "Q762"
+    name: "Leonardo da Vinci"
+  - wikidata_id: "Q5592"
+    name: "Michelangelo"
+  - wikidata_id: "Q5597"
+    name: "Raphael"
+  - wikidata_id: "Q5669"
+    name: "Sandro Botticelli"
+
+  # 바로크
+  - wikidata_id: "Q42207"
+    name: "Caravaggio"
+  - wikidata_id: "Q5598"
+    name: "Peter Paul Rubens"
+  - wikidata_id: "Q5599"
+    name: "Rembrandt"
+  - wikidata_id: "Q41264"
+    name: "Johannes Vermeer"
+  - wikidata_id: "Q297"
+    name: "Diego Velázquez"
+
+  # 낭만주의
+  - wikidata_id: "Q159758"
+    name: "Francisco Goya"
+  - wikidata_id: "Q558344"
+    name: "J.M.W. Turner"
+  - wikidata_id: "Q33477"
+    name: "Eugène Delacroix"
+
+  # 인상주의
+  - wikidata_id: "Q332"
+    name: "Édouard Manet"
+  - wikidata_id: "Q296"
+    name: "Claude Monet"
+  - wikidata_id: "Q39931"
+    name: "Pierre-Auguste Renoir"
+  - wikidata_id: "Q46373"
+    name: "Edgar Degas"
+  - wikidata_id: "Q82445"
+    name: "Camille Pissarro"
+  - wikidata_id: "Q42551"
+    name: "Alfred Sisley"
+  - wikidata_id: "Q173223"
+    name: "Mary Cassatt"
+  - wikidata_id: "Q233690"
+    name: "Berthe Morisot"
+
+  # 후기인상주의
+  - wikidata_id: "Q5582"
+    name: "Vincent van Gogh"
+  - wikidata_id: "Q35548"
+    name: "Paul Cézanne"
+  - wikidata_id: "Q37693"
+    name: "Paul Gauguin"
+  - wikidata_id: "Q34013"
+    name: "Georges Seurat"
+  - wikidata_id: "Q40039"
+    name: "Henri de Toulouse-Lautrec"
+
+  # 아르누보 / 표현주의
+  - wikidata_id: "Q34661"
+    name: "Gustav Klimt"
+  - wikidata_id: "Q38270"
+    name: "Egon Schiele"
+  - wikidata_id: "Q41406"
+    name: "Edvard Munch"
+
+  # 추상 / 야수파
+  - wikidata_id: "Q61064"
+    name: "Wassily Kandinsky"
+  - wikidata_id: "Q44007"
+    name: "Paul Klee"
+  - wikidata_id: "Q5589"
+    name: "Henri Matisse"
+
+  # 큐비즘 / 초현실주의 (⚠️ 저작권 주의)
+  - wikidata_id: "Q5593"
+    name: "Pablo Picasso"
+  - wikidata_id: "Q5577"
+    name: "Salvador Dalí"
+
+  # 표현주의 / 초현실 / 데 스틸
+  - wikidata_id: "Q44287"
+    name: "Amedeo Modigliani"
+  - wikidata_id: "Q28396"
+    name: "Marc Chagall"
+  - wikidata_id: "Q151803"
+    name: "Piet Mondrian"
+
+  # 조각
+  - wikidata_id: "Q30755"
+    name: "Auguste Rodin"
+
+  # 르네상스 (추가)
+  - wikidata_id: "Q5580"
+    name: "Albrecht Dürer"
+  - wikidata_id: "Q207259"
+    name: "El Greco"
+  - wikidata_id: "Q47551"
+    name: "Titian"
+  - wikidata_id: "Q102272"
+    name: "Jan van Eyck"
+  - wikidata_id: "Q130531"
+    name: "Hieronymus Bosch"
+  - wikidata_id: "Q43199"
+    name: "Pieter Bruegel the Elder"
+
+  # 신고전주의
+  - wikidata_id: "Q83155"
+    name: "Jacques-Louis David"
+  - wikidata_id: "Q47050"
+    name: "Jean-Auguste-Dominique Ingres"
+
+  # 사실주의
+  - wikidata_id: "Q34618"
+    name: "Gustave Courbet"
+  - wikidata_id: "Q155626"
+    name: "John Singer Sargent"
+  - wikidata_id: "Q210508"
+    name: "Winslow Homer"
+
+  # 우키요에
+  - wikidata_id: "Q5586"
+    name: "Katsushika Hokusai"
+  - wikidata_id: "Q226131"
+    name: "Utagawa Hiroshige"

@@ -1,4 +1,5 @@
 import uuid
+from typing import Optional
 
 from sqlalchemy import String, Text
 from sqlalchemy.dialects.postgresql import UUID as PG_UUID
@@ -20,10 +21,10 @@ class Institution(BaseEntity):
     country_code: Mapped[str] = mapped_column(String)
     name_en: Mapped[str] = mapped_column(String)
     name_ko: Mapped[str] = mapped_column(String)
-    website: Mapped[str | None] = mapped_column(String, nullable=True)
-    description_en: Mapped[str | None] = mapped_column(Text, nullable=True)
-    description_ko: Mapped[str | None] = mapped_column(Text, nullable=True)
-    wikidata_id: Mapped[str | None] = mapped_column(String, nullable=True)
+    website: Mapped[Optional[str]] = mapped_column(String, nullable=True)
+    description_en: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    description_ko: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    wikidata_id: Mapped[Optional[str]] = mapped_column(String, nullable=True)
 
     @classmethod
     def create(
@@ -32,10 +33,10 @@ class Institution(BaseEntity):
         country_code: str,
         name_en: str,
         name_ko: str,
-        website: str | None = None,
-        description_en: str | None = None,
-        description_ko: str | None = None,
-        wikidata_id: str | None = None,
+        website: Optional[str] = None,
+        description_en: Optional[str] = None,
+        description_ko: Optional[str] = None,
+        wikidata_id: Optional[str] = None,
     ) -> "Institution":
         return cls(
             id=uuid.uuid4(),
